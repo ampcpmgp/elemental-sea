@@ -2,8 +2,13 @@
   "name": "elemental-sea",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun run index.ts",
+    "type-check": "tsc"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "turbo": "^1.13.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
