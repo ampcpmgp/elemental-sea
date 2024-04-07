@@ -32,4 +32,4 @@ export const elementSymbols = [
 
     // rest of seventh
     "Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Nh","Fl","Mc","Lv","Ts","Og"
-];
+] as const;
