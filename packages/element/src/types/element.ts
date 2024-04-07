@@ -1,5 +1,6 @@
 export interface Element {
   symbol: ElementSymbol;
+  number: number;
 }
 
 // prettier-ignore
@@ -23,7 +24,7 @@ export type ElementState = "standard" | "isotope";
 
 export type ElementSource = "natural" | "synthetic";
 
-export type ElementAppearance = "silvery" | "dull" | "metallic";
+export type ElementAppearance = "silvery" | "dull" | "metallic" | "colorless";
 
 export type ElementAtomicStructure =
   | "body-centered cubic"
