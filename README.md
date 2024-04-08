@@ -14,3 +14,8 @@ bun install
 bunx turbo run dev
 ```
 
+## Generate package
+
+```shell
+bunx turbo gen workspace
+```
