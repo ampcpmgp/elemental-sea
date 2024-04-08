@@ -1,7 +1,6 @@
 {
   "name": "elemental-sea",
   "module": "index.ts",
-  "type": "module",
   "scripts": {
     "start": "bun run index.ts",
     "type-check": "tsc"
