@@ -19,3 +19,10 @@ bunx turbo run dev
 ```shell
 bunx turbo gen workspace
 ```
+
+## Install package
+
+```shell
+cd packages/<package-name>
+bun add <package-name> # if dev package, use -d option
+```
