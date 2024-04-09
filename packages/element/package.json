@@ -9,7 +9,7 @@
     "lint": "echo 'Add lint script here'",
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {
+  "devDependencies": {
     "tsconfig": "workspace:*"
   }
 }
