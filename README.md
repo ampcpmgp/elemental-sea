@@ -14,6 +14,12 @@ bun install
 bunx turbo run dev
 ```
 
+## Run (specific package)
+
+```shell
+bunx turbo run type-check --filter=element
+```
+
 ## Generate package
 
 ```shell

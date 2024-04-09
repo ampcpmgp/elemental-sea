@@ -28,6 +28,16 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         path: "{{ turbo.paths.root }}/{{ type }}/{{ name }}/README.md",
         templateFile: "templates/readme.hbs",
       },
+      {
+        type: "add",
+        path: "{{ turbo.paths.root }}/{{ type }}/{{ name }}/tsconfig.json",
+        templateFile: "templates/tsconfig.hbs",
+      },
+      {
+        type: "add",
+        path: "{{ turbo.paths.root }}/{{ type }}/{{ name }}/src/index.ts",
+        templateFile: "templates/index.hbs",
+      },
     ],
   });
 }
