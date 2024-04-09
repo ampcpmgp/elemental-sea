@@ -1,44 +1,26 @@
 import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  plop.setGenerator("example", {
+  plop.setGenerator("generate package", {
     description:
-      "An example Turborepo generator - creates a new file at the root of the project",
+      "Create a new package in the monorepo with a README.md and package.json",
     prompts: [
       {
         type: "input",
-        name: "file",
-        message: "What is the name of the new file to create?",
-        validate: (input: string) => {
-          if (input.includes(".")) {
-            return "file name cannot include an extension";
-          }
-          if (input.includes(" ")) {
-            return "file name cannot include spaces";
-          }
-          if (!input) {
-            return "file name is required";
-          }
-          return true;
-        },
-      },
-      {
-        type: "list",
-        name: "type",
-        message: "What type of file should be created?",
-        choices: [".md", ".txt"],
-      },
-      {
-        type: "input",
-        name: "title",
-        message: "What should be the title of the new file?",
+        name: "name",
+        message: "What is the name of the package?",
       },
     ],
     actions: [
       {
         type: "add",
-        path: "{{ turbo.paths.root }}/{{ dashCase file }}{{ type }}",
-        templateFile: "templates/turborepo-generators.hbs",
+        path: "{{ turbo.paths.root }}/packages/{{ name }}/package.json",
+        templateFile: "templates/package.hbs",
+      },
+      {
+        type: "add",
+        path: "{{ turbo.paths.root }}/packages/{{ name }}/README.md",
+        templateFile: "templates/readme.hbs",
       },
     ],
   });
