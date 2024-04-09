@@ -20,7 +20,17 @@ bunx turbo run dev
 bunx turbo run type-check --filter=element
 ```
 
-## Generate package
+## Generate template workspace
+
+```shell
+bunx turbo gen
+
+? Select generator to run   generate workspace: Create a new workspace in the monorepo with a README.md and package.json
+? What type of workspace is this? packages
+? What is the name of the workspace? vitest-config
+```
+
+## Generate blank package
 
 ```shell
 bunx turbo gen workspace
