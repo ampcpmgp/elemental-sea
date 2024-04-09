@@ -5,6 +5,9 @@
       "build": {
         "outputs": ["dist/**"]
       },
+      "test": {},
+      "lint": {},
+      "format-check": {},
       "type-check": {}
     }
   }
