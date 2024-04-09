@@ -9,6 +9,6 @@
     "lint": "echo 'Add lint script here'"
   },
   "devDependencies": {
-    "@tsconfig/bun": "^1.0.5"
+    "@tsconfig/recommended": "^1.0.6"
   }
 }
