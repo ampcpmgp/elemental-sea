@@ -1,3 +1,14 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json"
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/recommended/tsconfig.json",
+
+  "compilerOptions": {
+    "module": "NodeNext",
+
+    "moduleResolution": "NodeNext",
+
+    "types": [
+      "vitest/importMeta"
+    ]
+  }
 }
