@@ -8,6 +8,7 @@
       "test": {},
       "lint": {},
       "format-check": {},
-      "type-check": {}
+      "type-check": {},
+      "coverage": {}
     }
   }

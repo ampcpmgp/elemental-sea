@@ -4,13 +4,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "vitest",
+    "test": "vitest run",
     "coverage": "vitest run --coverage",
     "lint": "bunx @biomejs/biome lint .",
     "format-check": "bunx @biomejs/biome format .",
-    "format": "bunx @biomejs/biome format . --write",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {

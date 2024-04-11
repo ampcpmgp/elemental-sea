@@ -8,7 +8,6 @@
   "scripts": {
     "lint": "bunx @biomejs/biome lint .",
     "format-check": "bunx @biomejs/biome format .",
-    "format": "bunx @biomejs/biome format . --write",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
