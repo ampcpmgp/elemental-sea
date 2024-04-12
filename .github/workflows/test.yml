@@ -1,0 +1,22 @@
+name: Unit Tests
+on: [push]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v4
+        # https://bun.sh/guides/runtime/cicd
+        with:
+          # https://github.com/ampcpmgp/elemental-sea/settings/secrets/actions
+          token: ${{ secrets.PAT }}
+
+      # https://bun.sh/guides/runtime/cicd
+      - uses: oven-sh/setup-bun@v1
+
+      # Run
+      - run: bun install
+      - run: bun run test
+      
+  
