@@ -42,3 +42,11 @@ bunx turbo gen workspace
 cd packages/<package-name>
 bun add <package-name> # if dev package, use -d option
 ```
+
+## Publish package
+
+```shell
+# e.g.
+cd pakcages/element
+npm publish --access=public ./
+```
