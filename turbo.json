@@ -1,20 +1,17 @@
 {
-    "$schema": "https://turbo.build/schema.json",
-    "pipeline": {
-      "dev": {},
-      "build": {
-        "outputs": ["dist/**"],
-				"dependsOn": ["build"]
-      },
-      "test": {},
-      "lint": {},
-      "check": {},
-      "format-check": {},
-      "type-check": {},
-      "coverage": {},
-			"deploy": {
-				"dependsOn": ["build", "test", "lint", "check", "format-check", "type-check"]
-			}
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"dev": {},
+		"build": {
+			"outputs": ["dist/**"]
+		},
+		"test": {},
+		"lint": {},
+		"check": {},
+		"format-check": {},
+		"type-check": {},
+		"coverage": {},
+		"deploy": {}
+	}
+}
 
