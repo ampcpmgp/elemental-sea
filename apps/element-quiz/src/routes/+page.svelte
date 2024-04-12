@@ -1,5 +1,5 @@
 <script type="ts">
-	import { elementSymbols } from 'element';
+	import { elementSymbols } from '@elemental-sea/element';
 </script>
 
 <ul>
