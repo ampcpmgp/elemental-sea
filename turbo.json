@@ -3,13 +3,18 @@
     "pipeline": {
       "dev": {},
       "build": {
-        "outputs": ["dist/**"]
+        "outputs": ["dist/**"],
+				"dependsOn": ["build"]
       },
       "test": {},
       "lint": {},
       "check": {},
       "format-check": {},
       "type-check": {},
-      "coverage": {}
+      "coverage": {},
+			"deploy": {
+				"dependsOn": ["build", "test", "lint", "check", "format-check", "type-check"]
+			}
     }
   }
+
