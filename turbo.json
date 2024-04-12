@@ -8,10 +8,10 @@
 		"test": {},
 		"lint": {},
 		"check": {},
+		"format": {},
 		"format-check": {},
 		"type-check": {},
 		"coverage": {},
 		"deploy": {}
 	}
 }
-

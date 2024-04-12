@@ -1,1 +1,1 @@
-export { baseTestConfig } from "./vitest.base.config.mjs"
+export { baseTestConfig } from "./vitest.base.config.mjs";

@@ -1,21 +1,22 @@
 {
-  "name": "@elemental-sea/element",
-  "version": "0.0.0",
-  "type": "module",
+	"name": "@elemental-sea/element",
+	"version": "0.0.0",
+	"type": "module",
 	"main": "src/index.ts",
-  "scripts": {
-    "test": "vitest run",
-    "coverage": "vitest run --coverage",
-    "lint": "bunx @biomejs/biome lint .",
-    "format-check": "bunx @biomejs/biome format .",
-    "type-check": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.6.4",
-    "@vitest/coverage-v8": "^1.4.0",
-    "tsconfig": "workspace:*",
-    "typescript": "^5.4.4",
-    "vitest": "^1.4.0",
-    "vitest-config": "workspace:*"
-  }
+	"scripts": {
+		"test": "vitest run",
+		"coverage": "vitest run --coverage",
+		"lint": "bunx @biomejs/biome lint .",
+		"format": "bunx @biomejs/biome format . --write",
+		"format-check": "bunx @biomejs/biome format .",
+		"type-check": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.6.4",
+		"@vitest/coverage-v8": "^1.4.0",
+		"tsconfig": "workspace:*",
+		"typescript": "^5.4.4",
+		"vitest": "^1.4.0",
+		"vitest-config": "workspace:*"
+	}
 }

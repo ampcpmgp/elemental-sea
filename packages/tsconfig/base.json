@@ -1,13 +1,11 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@tsconfig/recommended/tsconfig.json",
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "@tsconfig/recommended/tsconfig.json",
 
-  "compilerOptions": {
-    "module": "ESNext",
+	"compilerOptions": {
+		"module": "ESNext",
 		"moduleResolution": "Bundler",
 
-    "types": [
-      "vitest/importMeta"
-    ]
-  }
+		"types": ["vitest/importMeta"]
+	}
 }

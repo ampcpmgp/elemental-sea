@@ -1,19 +1,24 @@
 {
-  "name": "elemental-sea",
-  "module": "index.ts",
-  "scripts": {
-    "start": "bun run index.ts",
-    "type-check": "tsc"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "turbo": "^1.13.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
+	"name": "elemental-sea",
+	"module": "index.ts",
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "turbo run build",
+		"test": "turbo run test",
+		"check": "turbo run check",
+		"lint": "turbo run lint",
+		"format": "turbo run format",
+		"format-check": "turbo run format-check",
+		"type-check": "turbo run type-check",
+		"coverage": "turbo run coverage",
+		"deploy": "turbo run deploy"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"turbo": "^1.13.2"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"workspaces": ["packages/*", "apps/*"]
 }
