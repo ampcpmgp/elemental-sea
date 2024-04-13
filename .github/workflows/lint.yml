@@ -1,0 +1,27 @@
+name: Lint
+on: [push]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: git --version
+      
+      # workaround checkout
+      - run: git clone --depth 1 --branch ${{ github.ref_name }} --single-branch https://github.com/ampcpmgp/elemental-sea.git .
+
+      # actions/checkout causes error
+      # https://github.com/ampcpmgp/elemental-sea/actions/runs/8670351694/job/23778249261]
+      #
+      # try to below, but not working
+      # https://github.com/actions/checkout/issues/395
+      # 
+      # - uses: action/checkout@v4
+
+      # https://bun.sh/guides/runtime/cicd
+      - uses: oven-sh/setup-bun@v1
+
+      # Run
+      - run: bun install
+      - run: bun run lint
