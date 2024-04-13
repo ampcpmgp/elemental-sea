@@ -6,6 +6,12 @@ jobs:
     name: test
     runs-on: ubuntu-latest
 
+    permissions:
+      # Required to checkout the code
+      contents: read
+      # Required to put a comment into the pull-request
+      pull-requests: write
+
     env:
       # https://turbo.build/repo/docs/ci/github-actions#remote-caching
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
@@ -15,7 +21,8 @@ jobs:
       - run: git --version
       
       # workaround checkout
-      - run: git clone --depth 1 --branch ${{ github.ref_name }} --single-branch https://github.com/ampcpmgp/elemental-sea.git .
+      # https://docs.github.com/ja/actions/learn-github-actions/contexts
+      - run: git clone --depth 1 --branch "${{ github.head_ref }}" --single-branch https://github.com/ampcpmgp/elemental-sea.git .
 
       # actions/checkout causes error
       # https://github.com/ampcpmgp/elemental-sea/actions/runs/8670351694/job/23778249261]
@@ -31,3 +38,9 @@ jobs:
       # Run
       - run: bun install
       - run: bun run coverage
+
+      - name: Report Coverage
+        # Set if: always() to also generate the report if tests are failing
+        # Only works if you set `reportOnFailure: true` in your vite config
+        if: always() 
+        uses:  davelosert/vitest-coverage-report-action@v2
