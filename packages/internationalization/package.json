@@ -6,6 +6,7 @@
 	"private": true,
 	"scripts": {
 		"test": "vitest run",
+		"dev": "paraglide-js compile --watch --project ./project.inlang --outdir ./src/paraglide",
 		"coverage": "vitest run --coverage",
 		"lint": "bunx @biomejs/biome lint .",
 		"format": "bunx @biomejs/biome format . --write",
