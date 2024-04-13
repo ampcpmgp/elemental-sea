@@ -13,7 +13,9 @@ jobs:
     name: test
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.repository }}
+      - run: ls
+      - run: git --version
+      - run: echo "${{ github.repository }}"
 
       - uses: action/checkout@v4
         # https://bun.sh/guides/runtime/cicd
