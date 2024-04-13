@@ -7,15 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git --version
-
-      # https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
-      - run: echo "${{ github.repository }}"
-      - run: echo "${{ github.ref_name }}"
       
-      # clone
+      # workaround checkout
       - run: git clone --depth 1 --branch ${{ github.ref_name }} --single-branch https://github.com/ampcpmgp/elemental-sea.git .
-
-      - run: ls -al
 
       # actions/checkout causes error
       # https://github.com/ampcpmgp/elemental-sea/actions/runs/8670351694/job/23778249261]
@@ -31,5 +25,3 @@ jobs:
       # Run
       - run: bun install
       - run: bun run test
-      
-  
