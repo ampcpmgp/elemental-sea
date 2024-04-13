@@ -8,7 +8,10 @@ jobs:
     steps:
       - run: git --version
       - run: echo "${{ github.repository }}"
+      - run: echo "${{ github.ref_name }}"
       - run: git clone --depth 1 https://github.com/ampcpmgp/elemental-sea.git
+
+      - run: ls -al
 
       # actions/checkout causes error
       # https://github.com/ampcpmgp/elemental-sea/actions/runs/8670351694/job/23778249261]
@@ -19,10 +22,10 @@ jobs:
       # - uses: action/checkout@v4
 
       # https://bun.sh/guides/runtime/cicd
-      - uses: oven-sh/setup-bun@v1
+      # - uses: oven-sh/setup-bun@v1
 
       # Run
-      - run: bun install
-      - run: bun run test
+      # - run: bun install
+      # - run: bun run test
       
   
