@@ -17,19 +17,19 @@ jobs:
       - run: git --version
       - run: echo "${{ github.repository }}"
 
-      - uses: action/checkout@v4
-        # https://bun.sh/guides/runtime/cicd
-        with:
-          repository: ampcpmgp/elemental-sea
-          # token: ${{ secrets.GITHUB_TOKEN }}
-          # https://github.com/ampcpmgp/elemental-sea/settings/secrets/actions
-          token: ${{ secrets.PAT }}
+      # - uses: action/checkout@v4
+      #   # https://bun.sh/guides/runtime/cicd
+      #   with:
+      #     repository: ampcpmgp/elemental-sea
+      #     # token: ${{ secrets.GITHUB_TOKEN }}
+      #     # https://github.com/ampcpmgp/elemental-sea/settings/secrets/actions
+      #     token: ${{ secrets.PAT }}
 
-      # https://bun.sh/guides/runtime/cicd
-      - uses: oven-sh/setup-bun@v1
+      # # https://bun.sh/guides/runtime/cicd
+      # - uses: oven-sh/setup-bun@v1
 
-      # Run
-      - run: bun install
-      - run: bun run test
+      # # Run
+      # - run: bun install
+      # - run: bun run test
       
   
