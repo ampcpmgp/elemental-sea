@@ -1,5 +1,5 @@
 {
-	"name": "internationalization",
+	"name": "@elemental-sea/internationalization",
 	"version": "0.0.0",
 	"type": "module",
 	"private": true,
