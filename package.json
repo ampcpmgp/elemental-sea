@@ -5,7 +5,7 @@
 		"dev": "turbo run dev",
 		"build": "turbo run build",
 		"test": "turbo run test",
-		"check": "turbo run check",
+		"svelte-check": "turbo run svelte-check",
 		"lint": "turbo run lint",
 		"format": "turbo run format",
 		"format-check": "turbo run format-check",
