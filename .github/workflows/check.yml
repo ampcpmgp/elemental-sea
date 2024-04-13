@@ -2,8 +2,8 @@ name: Check (format-check, lint, type-check)
 on: [push]
 
 jobs:
-  test:
-    name: test
+  check:
+    name: check
     runs-on: ubuntu-latest
 
     env:

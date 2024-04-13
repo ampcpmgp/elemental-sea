@@ -2,8 +2,8 @@ name: Format Check
 on: [push]
 
 jobs:
-  test:
-    name: test
+  format-check:
+    name: format-check
     runs-on: ubuntu-latest
 
     env:
