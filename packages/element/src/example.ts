@@ -6,6 +6,6 @@ export function add(...args: number[]) {
 if (import.meta.vitest) {
 	const { it, expect } = import.meta.vitest;
 	it("add", () => {
-		expect(add(1, 2, 3)).toBe(6);
+		expect(add(1, 2, 4)).toBe(7);
 	});
 }

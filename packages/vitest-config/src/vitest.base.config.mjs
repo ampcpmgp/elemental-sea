@@ -14,4 +14,9 @@ export const baseTestConfig = {
 			}),
 		},
 	},
+
+	coverage: {
+		reporter: ["json-summary", "json"],
+		reportOnFailure: true,
+	},
 };
