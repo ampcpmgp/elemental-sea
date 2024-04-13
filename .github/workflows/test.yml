@@ -1,12 +1,5 @@
 name: Unit Tests
 on: [push]
-# https://github.com/actions/checkout/issues/254#issuecomment-1966838828
-# permissions:
-#   actions: write       # Necessary to cancel workflow executions
-#   checks: write        # Necessary to write reports
-#   pull-requests: write # Necessary to comment on PRs
-#   contents: read
-#   packages: write
 
 jobs:
   test:
@@ -17,19 +10,19 @@ jobs:
       - run: echo "${{ github.repository }}"
       - run: git clone --depth 1 https://github.com/ampcpmgp/elemental-sea.git
 
+      # actions/checkout causes error
+      # https://github.com/ampcpmgp/elemental-sea/actions/runs/8670351694/job/23778249261]
+      #
+      # try to below, but not working
+      # https://github.com/actions/checkout/issues/395
+      # 
       # - uses: action/checkout@v4
-      #   # https://bun.sh/guides/runtime/cicd
-      #   with:
-      #     repository: ampcpmgp/elemental-sea
-      #     # token: ${{ secrets.GITHUB_TOKEN }}
-      #     # https://github.com/ampcpmgp/elemental-sea/settings/secrets/actions
-      #     token: ${{ secrets.PAT }}
 
-      # # https://bun.sh/guides/runtime/cicd
-      # - uses: oven-sh/setup-bun@v1
+      # https://bun.sh/guides/runtime/cicd
+      - uses: oven-sh/setup-bun@v1
 
-      # # Run
-      # - run: bun install
-      # - run: bun run test
+      # Run
+      - run: bun install
+      - run: bun run test
       
   
