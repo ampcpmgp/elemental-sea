@@ -15,6 +15,7 @@ jobs:
       - run: git --version
       
       # workaround checkout
+      # https://docs.github.com/ja/actions/learn-github-actions/contexts
       - run: git clone --depth 1 --branch "${{ github.ref_name }}" --single-branch https://github.com/ampcpmgp/elemental-sea.git .
 
       # actions/checkout causes error
