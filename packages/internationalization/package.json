@@ -9,7 +9,9 @@
 		"lint": "bunx @biomejs/biome lint .",
 		"format": "bunx @biomejs/biome format . --write",
 		"format-check": "bunx @biomejs/biome format .",
-		"type-check": "tsc --noEmit"
+		"type-check": "tsc --noEmit",
+		"postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
+		"build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.6.4",
@@ -17,6 +19,7 @@
 		"tsconfig": "workspace:*",
 		"typescript": "^5.4.4",
 		"vitest": "^1.4.0",
-		"vitest-config": "workspace:*"
+		"vitest-config": "workspace:*",
+		"@inlang/paraglide-js": "1.6.1"
 	}
 }
