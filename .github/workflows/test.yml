@@ -3,6 +3,14 @@ on: [push]
 
 jobs:
   test:
+    # https://github.com/actions/checkout/issues/254#issuecomment-1966838828
+    permissions:
+      actions: write       # Necessary to cancel workflow executions
+      checks: write        # Necessary to write reports
+      pull-requests: write # Necessary to comment on PRs
+      contents: read
+      packages: write
+
     name: test
     runs-on: ubuntu-latest
     steps:
