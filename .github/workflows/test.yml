@@ -7,9 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git --version
+
+      # https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
       - run: echo "${{ github.repository }}"
       - run: echo "${{ github.ref_name }}"
-      - run: git clone --depth 1 https://github.com/ampcpmgp/elemental-sea.git
+      
+      # clone
+      - run: git clone --depth 1 --branch ${{ github.ref_name }} --single-branch https://github.com/ampcpmgp/elemental-sea.git .
 
       - run: ls -al
 
