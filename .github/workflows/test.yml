@@ -1,24 +1,24 @@
 name: Unit Tests
 on: [push]
+# https://github.com/actions/checkout/issues/254#issuecomment-1966838828
+permissions:
+  actions: write       # Necessary to cancel workflow executions
+  checks: write        # Necessary to write reports
+  pull-requests: write # Necessary to comment on PRs
+  contents: read
+  packages: write
 
 jobs:
   test:
-    # https://github.com/actions/checkout/issues/254#issuecomment-1966838828
-    permissions:
-      actions: write       # Necessary to cancel workflow executions
-      checks: write        # Necessary to write reports
-      pull-requests: write # Necessary to comment on PRs
-      contents: read
-      packages: write
-
     name: test
     runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v4
         # https://bun.sh/guides/runtime/cicd
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           # https://github.com/ampcpmgp/elemental-sea/settings/secrets/actions
-          token: ${{ secrets.PAT }}
+          # token: ${{ secrets.PAT }}
 
       # https://bun.sh/guides/runtime/cicd
       - uses: oven-sh/setup-bun@v1
