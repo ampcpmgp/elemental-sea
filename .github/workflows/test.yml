@@ -13,9 +13,9 @@ jobs:
     name: test
     runs-on: ubuntu-latest
     steps:
-      - run: ls
       - run: git --version
       - run: echo "${{ github.repository }}"
+      - run: git clone --depth 1 https://github.com/ampcpmgp/elemental-sea.git
 
       # - uses: action/checkout@v4
       #   # https://bun.sh/guides/runtime/cicd
