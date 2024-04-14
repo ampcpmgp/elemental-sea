@@ -5,11 +5,8 @@ export function add(...args: number[]) {
 // in-source test suites
 if (import.meta.vitest) {
 	const { it, expect } = import.meta.vitest;
-	// it("add", () => {
-	// 	expect(add(1, 2, 5)).toBe(8);
-	// });
 
-	it("test", () => {
-		expect(1).toBe(1);
+	it("add", () => {
+		expect(add(1, 2, 5)).toBe(8);
 	});
 }
