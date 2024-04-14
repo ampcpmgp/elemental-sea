@@ -2,8 +2,8 @@ name: Type Check
 on: [push]
 
 jobs:
-  test:
-    name: test
+  type-check:
+    name: type-check
     runs-on: ubuntu-latest
 
     env:

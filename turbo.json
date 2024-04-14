@@ -7,7 +7,7 @@
 		},
 		"test": {},
 		"lint": {},
-		"check": {},
+		"svelte-check": {},
 		"format": {},
 		"format-check": {},
 		"type-check": {},

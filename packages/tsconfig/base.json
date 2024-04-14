@@ -5,6 +5,8 @@
 	"compilerOptions": {
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
+		"allowJs": true,
+		"outDir": "dist",
 
 		"types": ["vitest/importMeta"]
 	}

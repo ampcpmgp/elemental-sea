@@ -2,8 +2,8 @@ name: Coverage
 on: [pull_request]
 
 jobs:
-  test:
-    name: test
+  coverage:
+    name: coverage
     runs-on: ubuntu-latest
 
     permissions:

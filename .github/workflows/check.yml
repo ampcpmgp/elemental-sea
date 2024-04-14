@@ -1,9 +1,9 @@
-name: Check (format-check, lint, type-check)
+name: Svelte Check
 on: [push]
 
 jobs:
-  test:
-    name: test
+  svelte-check:
+    name: svelte-check
     runs-on: ubuntu-latest
 
     env:
@@ -31,4 +31,4 @@ jobs:
 
       # Run
       - run: bun install
-      - run: bun run check
+      - run: bun run svelte-check
