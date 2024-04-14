@@ -1,6 +1,6 @@
 <script type="ts">
 	import { elementSymbols } from "@elemental-sea/element";
-	import { m } from "@elemental-sea/internationalization";
+	import { m } from "@elemental-sea/internationalization-element-quiz";
 </script>
 
 <p>

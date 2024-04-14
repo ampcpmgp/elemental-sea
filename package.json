@@ -21,5 +21,5 @@
 	"peerDependencies": {
 		"typescript": "^5.0.0"
 	},
-	"workspaces": ["packages/*", "apps/*"]
+	"workspaces": ["packages/*", "packages/internationalization/*", "apps/*"]
 }
