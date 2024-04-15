@@ -1,26 +1,28 @@
 import type { elementSymbols } from "../constants/element-symbols";
 
 export interface Element {
-	symbol: ElementSymbol;
+	symbol: Element.Symbol;
 	number: number;
-	category: ElementCategory;
+	category: Element.Category;
 }
 
-// array to union
-export type ElementSymbol = (typeof elementSymbols)[number];
+export namespace Element {
+	// array to union
+	export type Symbol = (typeof elementSymbols)[number];
 
-export type ElementCategory =
-	| "Nonmetal"
-	| "Noble Gas"
-	| "Alkali Metal"
-	| "Alkaline Earth Metal"
-	| "Metalloid"
-	| "Halogen"
-	| "Post-transition Metal"
-	| "Transition Metal"
-	| "Lanthanide"
-	| "Actinide"
-	| "Unknown";
+	export type Category =
+		| "Nonmetal"
+		| "Noble Gas"
+		| "Alkali Metal"
+		| "Alkaline Earth Metal"
+		| "Metalloid"
+		| "Halogen"
+		| "Post-transition Metal"
+		| "Transition Metal"
+		| "Lanthanide"
+		| "Actinide"
+		| "Unknown";
+}
 
 // below not interfaced
 export type ElementPhase = "solid" | "liquid" | "gas";
