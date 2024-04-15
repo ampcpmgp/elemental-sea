@@ -1,2 +1,2 @@
 export * as m from "./paraglide/messages";
-export * from "./paraglide/runtime";
+export * as runtime from "./paraglide/runtime";
