@@ -22,6 +22,7 @@ export type ElementCategory =
 	| "Actinide"
 	| "Unknown";
 
+// below not interfaced
 export type ElementPhase = "solid" | "liquid" | "gas";
 
 export type ElementState = "standard" | "isotope";
