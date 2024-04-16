@@ -17,6 +17,6 @@
 		"@elemental-sea/tsconfig": "workspace:*",
 		"typescript": "^5.4.4",
 		"vitest": "^1.4.0",
-		"vitest-config": "workspace:*"
+		"@elemental-sea/vitest-config": "workspace:*"
 	}
 }
