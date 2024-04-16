@@ -1,0 +1,9 @@
+{
+	"versionGroups": [
+		{
+			"label": "Use workspace",
+			"dependencies": ["@elemental-sea/*"],
+			"pinVersion": "workspace:*"
+		}
+	]
+}
