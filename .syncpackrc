@@ -2,7 +2,9 @@
 	"versionGroups": [
 		{
 			"label": "Use workspace",
-			"dependencies": ["@elemental-sea/*"],
+      "packages": ["**"],
+			"dependencyTypes": ["!local"],
+      "dependencies": ["$LOCAL"],
 			"pinVersion": "workspace:*"
 		}
 	]

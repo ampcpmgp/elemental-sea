@@ -43,6 +43,12 @@ cd packages/<package-name>
 bun add <package-name> # if dev package, use -d option
 ```
 
+## Fix mismatched versions
+
+```shell
+bun run fix-mismatched-versions
+```
+
 ## Publish package
 
 ```shell
