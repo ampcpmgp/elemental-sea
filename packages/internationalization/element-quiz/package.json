@@ -1,27 +1,27 @@
 {
-	"name": "@elemental-sea/internationalization-element-quiz",
-	"version": "0.0.0",
-	"type": "module",
-	"main": "src/index.ts",
-	"private": true,
-	"scripts": {
-		"test": "vitest run",
-		"dev": "paraglide-js compile --watch --project ./project.inlang --outdir ./src/paraglide",
-		"coverage": "vitest run --coverage",
-		"lint": "bunx @biomejs/biome lint .",
-		"format": "bunx @biomejs/biome format . --write",
-		"format-check": "bunx @biomejs/biome format .",
-		"type-check": "tsc --noEmit",
-		"postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
-		"build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.6.4",
-		"@vitest/coverage-v8": "^1.4.0",
-		"tsconfig": "workspace:*",
-		"typescript": "^5.4.4",
-		"vitest": "^1.4.0",
-		"vitest-config": "workspace:*",
-		"@inlang/paraglide-js": "1.6.1"
-	}
+  "name": "@elemental-sea/internationalization-element-quiz",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "dev": "paraglide-js compile --watch --project ./project.inlang --outdir ./src/paraglide",
+    "coverage": "vitest run --coverage",
+    "lint": "bunx @biomejs/biome lint .",
+    "format": "bunx @biomejs/biome format . --write",
+    "format-check": "bunx @biomejs/biome format .",
+    "type-check": "tsc --noEmit",
+    "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
+    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
+    "@vitest/coverage-v8": "^1.4.0",
+    "@elemental-sea/tsconfig": "workspace:*",
+    "typescript": "^5.4.4",
+    "vitest": "^1.5.0",
+    "@elemental-sea/vitest-config": "workspace:*",
+    "@inlang/paraglide-js": "1.6.1"
+  }
 }

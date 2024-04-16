@@ -1,0 +1,11 @@
+{
+	"versionGroups": [
+		{
+			"label": "Use workspace",
+      "packages": ["**"],
+			"dependencyTypes": ["!local"],
+      "dependencies": ["$LOCAL"],
+			"pinVersion": "workspace:*"
+		}
+	]
+}

@@ -1,20 +1,20 @@
 {
-	"name": "vitest-config",
-	"version": "0.0.0",
-	"private": true,
-	"main": "src/index.mjs",
-	"type": "module",
-	"types": "src/index.d.ts",
-	"scripts": {
-		"lint": "bunx @biomejs/biome lint .",
-		"format": "bunx @biomejs/biome format . --write",
-		"format-check": "bunx @biomejs/biome format .",
-		"type-check": "tsc --noEmit"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.6.4",
-		"tsconfig": "workspace:*",
-		"typescript": "^5.4.4",
-		"vitest": "^1.4.0"
-	}
+  "name": "@elemental-sea/vitest-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.mjs",
+  "type": "module",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "lint": "bunx @biomejs/biome lint .",
+    "format": "bunx @biomejs/biome format . --write",
+    "format-check": "bunx @biomejs/biome format .",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
+    "@elemental-sea/tsconfig": "workspace:*",
+    "typescript": "^5.4.4",
+    "vitest": "^1.5.0"
+  }
 }

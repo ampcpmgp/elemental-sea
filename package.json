@@ -1,25 +1,32 @@
 {
-	"name": "elemental-sea",
-	"module": "index.ts",
-	"scripts": {
-		"dev": "turbo run dev",
-		"build": "turbo run build",
-		"test": "turbo run test",
-		"svelte-check": "turbo run svelte-check",
-		"lint": "turbo run lint",
-		"format": "turbo run format",
-		"format-check": "turbo run format-check",
-		"type-check": "turbo run type-check",
-		"coverage": "vitest run --coverage --coverage.reportOnFailure --coverage.reporter=json-summary --coverage.reporter=json --coverage.reporter=html",
-		"deploy": "turbo run deploy"
-	},
-	"devDependencies": {
-		"@types/bun": "latest",
-		"turbo": "^1.13.2",
-		"vitest": "^1.5.0"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"workspaces": ["packages/*", "packages/internationalization/*", "apps/*"]
+  "name": "elemental-sea",
+  "module": "index.ts",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "svelte-check": "turbo run svelte-check",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "format-check": "turbo run format-check",
+    "type-check": "turbo run type-check",
+    "coverage": "vitest run --coverage --coverage.reportOnFailure --coverage.reporter=json-summary --coverage.reporter=json --coverage.reporter=html",
+    "deploy": "turbo run deploy",
+    "fix-mismatched-versions": "syncpack fix-mismatches"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
+    "@types/bun": "latest",
+    "syncpack": "^12.3.0",
+    "turbo": "^1.13.2",
+    "vitest": "^1.5.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.4.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "packages/internationalization/*",
+    "apps/*"
+  ]
 }
