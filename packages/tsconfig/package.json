@@ -1,5 +1,5 @@
 {
-	"name": "tsconfig",
+	"name": "@elemental-sea/tsconfig",
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
