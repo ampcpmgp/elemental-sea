@@ -1,9 +1,9 @@
 import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-	plop.setGenerator("generate workspace", {
+	plop.setGenerator("generate simple workspace", {
 		description:
-			"Create a new workspace in the monorepo with a package.json, tsconfig.json, and more.",
+			"Create a new simple workspace in the monorepo with a package.json, tsconfig.json, and more.",
 		prompts: [
 			{
 				type: "list",
