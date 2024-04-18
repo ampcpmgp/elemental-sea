@@ -9,7 +9,7 @@
     "lint": "bunx @biomejs/biome lint .",
     "format": "bunx @biomejs/biome format . --write",
     "format-check": "bunx @biomejs/biome format .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.0",
