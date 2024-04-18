@@ -11,7 +11,7 @@
     "lint": "bunx @biomejs/biome lint .",
     "format": "bunx @biomejs/biome format . --write",
     "format-check": "bunx @biomejs/biome format .",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc",
     "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
     "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
   },

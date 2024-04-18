@@ -1,1 +1,1 @@
-// console.log("🚀 Bun.env", Bun.env);
+console.log("🚀 Bun.env", Bun.env);
