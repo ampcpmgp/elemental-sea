@@ -1,23 +1,26 @@
 {
-	"name": "@elemental-sea/hydro-me",
-	"version": "0.0.0",
-	"type": "module",
-	"main": "src/index.ts",
-	"private": true,
-	"scripts": {
-		"test": "vitest run",
-		"coverage": "vitest run --coverage",
-		"lint": "bunx @biomejs/biome lint .",
-		"format": "bunx @biomejs/biome format . --write",
-		"format-check": "bunx @biomejs/biome format .",
-		"type-check": "tsc --noEmit"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.6.4",
-		"@vitest/coverage-v8": "^1.4.0",
-		"@elemental-sea/tsconfig": "workspace:*",
-		"typescript": "^5.4.4",
-		"vitest": "^1.4.0",
-		"@elemental-sea/vitest-config": "workspace:*"
-	}
+  "name": "@elemental-sea/hydro-me",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "lint": "bunx @biomejs/biome lint .",
+    "format": "bunx @biomejs/biome format . --write",
+    "format-check": "bunx @biomejs/biome format .",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "@vitest/coverage-v8": "^1.4.0",
+    "@elemental-sea/tsconfig": "workspace:*",
+    "typescript": "^5.4.4",
+    "vitest": "^1.4.0",
+    "@elemental-sea/vitest-config": "workspace:*"
+  },
+  "dependencies": {
+    "langchain": "^0.1.34"
+  }
 }

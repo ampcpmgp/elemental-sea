@@ -12,7 +12,8 @@
     "type-check": "turbo run type-check",
     "coverage": "vitest run --coverage --coverage.reportOnFailure --coverage.reporter=json-summary --coverage.reporter=json --coverage.reporter=html",
     "deploy": "turbo run deploy",
-    "fix-mismatched-versions": "syncpack fix-mismatches"
+    "fix-mismatched-versions": "syncpack fix-mismatches",
+		"show-lockfile": "bun bun.lockb > bun.txt"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.0",
