@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "private": true,
   "scripts": {
-		"sns-post": "bun run src/index.ts",
-		"sns-post:dev": "bun run src/index.ts --watch",
+    "sns-post": "bun run src/index.ts",
+    "sns-post:dev": "bun run src/index.ts --watch",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "lint": "bunx @biomejs/biome lint .",
@@ -23,6 +23,7 @@
     "@elemental-sea/vitest-config": "workspace:*"
   },
   "dependencies": {
+    "@langchain/google-genai": "^0.0.11",
     "langchain": "^0.1.34",
     "langsmith": "^0.1.14"
   },
