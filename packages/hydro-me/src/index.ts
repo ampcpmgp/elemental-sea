@@ -6,15 +6,20 @@ start();
 async function start() {
 	const summary = await generator.summary(
 		`
-NYK is among a growing list of shipping companies that are investing in ammonia as a fuel of the future. Ammonia has no carbon in its molecule, and can be produced from green hydrogen and a renewables-powered Haber-Bosch process that combines the H2 with nitrogen from the air — thus creating a green fuel with a higher energy density by volume than compressed or liquefied hydrogen.
-
-But ammonia poses a challenge: it is a highly toxic substance that has yet to be deployed as a fuel in shipping.
 `.trim(),
 	);
 
-	console.log("🚀 summary\n", summary);
+	console.log("\n\n🚀 summary 🚀\n\n", summary);
 
 	const refined = await generator.refine(summary, 4);
 
-	console.log("🚀 refined\n", refined);
+	console.log("\n\n🚀 refined 🚀\n\n", refined);
+
+	const toned = await generator.changeTone(refined);
+
+	console.log("\n\n🚀 toned 🚀\n\n", toned);
+
+	const output = await generator.addEmoji(toned);
+
+	console.log("\n\n🚀 output 🚀\n\n", output);
 }

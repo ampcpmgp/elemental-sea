@@ -1,4 +1,4 @@
-export function prompt(summary: string, limit: number) {
+export function makePrompt(summary: string, limit: number) {
 	const min = limit - 1;
 	const max = limit;
 

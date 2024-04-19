@@ -1,4 +1,4 @@
-export function prompt(news: string) {
+export function makePrompt(news: string) {
 	return `
 以下のニュースを、日本語に翻訳してくれますか？
 また、客観的かつ前向きな表現で、箇条書きにまとめてください。

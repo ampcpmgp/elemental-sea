@@ -1,5 +1,6 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { prompt } from "./prompt";
+import { makePrompt } from "./make-prompt";
+import { isString } from "../../utils/is-string";
 
 export async function summary(news: string) {
 	// API references: https://api.js.langchain.com/classes/langchain_google_genai.ChatGoogleGenerativeAI.html
@@ -8,14 +9,12 @@ export async function summary(news: string) {
 		maxOutputTokens: 2048,
 	});
 
-	const summary = prompt(news);
-	const res = await model.invoke(summary);
+	const prompt = makePrompt(news);
+	const res = await model.invoke(prompt);
 
 	const { content } = res;
 
-	if (!content || Array.isArray(content)) {
-		throw new Error("Failed to generate summary");
-	}
+	isString(content);
 
 	return content;
 }
