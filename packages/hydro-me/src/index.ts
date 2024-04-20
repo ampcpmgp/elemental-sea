@@ -17,20 +17,12 @@ async function start() {
 		},
 	});
 
-	console.log("🚀🚀🚀 summary 🚀🚀🚀");
-	console.log(summary);
-	console.log(summary.length);
-
 	prompt = Prompt.changeTone(summary, 240);
 	const toned = await Generator.text(prompt, "gpt-4-turbo-2024-04-09", {
 		openai: {
 			temperature: 0,
 		},
 	});
-
-	console.log("🚀🚀🚀 toned 🚀🚀🚀");
-	console.log(toned);
-	console.log(toned.length);
 
 	prompt = Prompt.changeToneSimple(summary, 240);
 
@@ -39,8 +31,4 @@ async function start() {
 			temperature: 0,
 		},
 	});
-
-	console.log("🚀🚀🚀 tonedSimple 🚀🚀🚀");
-	console.log(tonedSimple);
-	console.log(tonedSimple.length);
 }

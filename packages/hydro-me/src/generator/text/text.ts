@@ -41,5 +41,10 @@ export async function text(
 
 	isString(content);
 
+	console.info("🚀🚀🚀 generated text 🚀🚀🚀");
+	console.info(content);
+	console.info(content.length);
+	console.info();
+
 	return content;
 }
