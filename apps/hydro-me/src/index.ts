@@ -1,13 +1,15 @@
+import { crawl } from "./crawler/crawl";
 import { Generator } from "./generator";
 import { Prompt } from "./prompt";
 
 start();
 
 async function start() {
-	const text = `
-
-`;
 	let prompt = "";
+
+	const text = `
+	
+	`;
 
 	prompt = Prompt.summary(text);
 
@@ -25,7 +27,7 @@ async function start() {
 		},
 	});
 
-	prompt = Prompt.ChangeTone.outputSingleLine(summary, 240);
+	prompt = Prompt.ChangeTone.outputSingleLine(summary, 180);
 
 	const tonedSimple = await Generator.text(prompt, "gpt-4-turbo-2024-04-09", {
 		openai: {
