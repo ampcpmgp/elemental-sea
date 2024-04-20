@@ -12,19 +12,21 @@ export async function text(
 ) {
 	const model = match(modelName)
 		.with(
-			"claude-3-haiku",
-			() =>
+			"claude-3-haiku-20240307",
+			"claude-3-sonnet-20240229",
+			(modelName) =>
 				new ChatAnthropic({
+					model: modelName,
 					...option?.claude,
 				}),
 		)
 		.with(
-			"gpt-4-turbo",
+			"gpt-4-turbo-2024-04-09",
 			() =>
 				new ChatOpenAI({ model: "gpt-4-turbo-2024-04-09", ...option?.openai }),
 		)
 		.with(
-			"gemini-pro",
+			"gemini-1.0-pro",
 			() =>
 				// API references: https://api.js.langchain.com/classes/langchain_google_genai.ChatGoogleGenerativeAI.html
 				new ChatGoogleGenerativeAI({
