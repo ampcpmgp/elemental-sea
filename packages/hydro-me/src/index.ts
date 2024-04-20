@@ -6,6 +6,7 @@ start();
 async function start() {
 	const text = `
 
+
 `;
 	let prompt = "";
 
@@ -21,7 +22,7 @@ async function start() {
 	console.log(summary);
 	console.log(summary.length);
 
-	prompt = Prompt.changeTone(summary, 240);
+	prompt = Prompt.changeTone(summary, 260);
 	const toned = await Generator.text(prompt, "gpt-4-turbo", {
 		openai: {
 			temperature: 0,
@@ -32,7 +33,7 @@ async function start() {
 	console.log(toned);
 	console.log(toned.length);
 
-	prompt = Prompt.changeToneSimple(summary, 120);
+	prompt = Prompt.changeToneSimple(summary, 260);
 
 	const tonedSimple = await Generator.text(prompt, "gpt-4-turbo", {
 		openai: {
