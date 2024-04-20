@@ -1,10 +1,13 @@
-export function refine(summary: string, limit: number) {
-	const min = limit - 1;
-	const max = limit;
-
+export function refine(summary: string, limit = 4, lineLimit = 40) {
 	return `
-以下の要約を、客観的にかつ、ストーリー性を大事にしたうえで、${min}~${max}個の箇条書きにまとめてもらえますか？
-結果は何がなんでも、箇条書きのみを出力してください。
+以下の要約を、客観的にかつ、ストーリー性を大事にしたうえで、出来る限り多くの情報を入れたうえで1行最大${lineLimit}文字、最大${limit}行の箇条書きにまとめてもらえますか？
+
+テンプレートは以下に従ってください。
+
+- 内容のまとめ内容のまとめ
+- 内容のまとめ内容のまとめ
+
+最終出力は必ず、上記テンプレートのみを出力してください。
 
 \`\`\`
 ${summary}

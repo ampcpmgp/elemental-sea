@@ -4,25 +4,43 @@ import { Prompt } from "./prompt";
 start();
 
 async function start() {
-	const summaryPrompt = Prompt.summary(`
-	`);
-	const summary = await Generator.text(summaryPrompt, "gpt-4-turbo", {
+	const text = `
+
+`;
+	let prompt = "";
+
+	prompt = Prompt.summary(text);
+
+	const summary = await Generator.text(prompt, "gpt-4-turbo", {
 		openai: {
 			temperature: 0,
 		},
 	});
 
-	console.log("\n\n🚀 summary 🚀\n\n", summary);
+	console.log("🚀🚀🚀 summary 🚀🚀🚀");
+	console.log(summary);
+	console.log(summary.length);
 
-	// const refined = await Generator.refine(summary, 4);
+	prompt = Prompt.changeTone(summary, 240);
+	const toned = await Generator.text(prompt, "gpt-4-turbo", {
+		openai: {
+			temperature: 0,
+		},
+	});
 
-	// console.log("\n\n🚀 refined 🚀\n\n", refined);
+	console.log("🚀🚀🚀 toned 🚀🚀🚀");
+	console.log(toned);
+	console.log(toned.length);
 
-	// const toned = await Generator.changeTone(refined);
+	prompt = Prompt.changeToneSimple(summary, 120);
 
-	// console.log("\n\n🚀 toned 🚀\n\n", toned);
+	const tonedSimple = await Generator.text(prompt, "gpt-4-turbo", {
+		openai: {
+			temperature: 0,
+		},
+	});
 
-	// const output = await Generator.addEmoji(toned);
-
-	// console.log("\n\n🚀 output 🚀\n\n", output);
+	console.log("🚀🚀🚀 tonedSimple 🚀🚀🚀");
+	console.log(tonedSimple);
+	console.log(tonedSimple.length);
 }
