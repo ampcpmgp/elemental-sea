@@ -1,4 +1,4 @@
-export function makePrompt(summary: string, limit: number) {
+export function refine(summary: string, limit: number) {
 	const min = limit - 1;
 	const max = limit;
 
@@ -11,4 +11,3 @@ ${summary}
 \`\`\`
 `.trim();
 }
-// gemini PRO API

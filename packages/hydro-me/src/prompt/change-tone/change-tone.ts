@@ -1,4 +1,4 @@
-export function makePrompt(summary: string) {
+export function changeTone(summary: string) {
 	return `
 以下の要約を、箇条書きを保ったまま、自然にフレンドリーに、かつ丁寧に、優しい口調で言い換えてもらえますか？
 「！」を使っても良いですが、何が何でも最大で１つのみにしてください。
@@ -10,4 +10,3 @@ ${summary}
 \`\`\`
 `.trim();
 }
-// gpt-4 turbo
