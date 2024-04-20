@@ -1,4 +1,4 @@
-export function changeToneSimple(summary: string, maxChars: number) {
+export function outputSingleLine(summary: string, maxChars: number) {
 	return `
 以下の要約を、フレンドリーに、ナチュラルに、主観はほどほどに、主語を入れつつ、優しい口調で言い換えてもらえますか？
 「！」を使って親近感を高めてください。ただし、使いすぎると逆に親近感が薄れるので注意してください。自信が無ければ、最大１つまでにしてください！

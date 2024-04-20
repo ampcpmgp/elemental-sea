@@ -17,14 +17,15 @@ async function start() {
 		},
 	});
 
-	prompt = Prompt.changeTone(summary, 240);
+	prompt = Prompt.ChangeTone.outputMultiLines(summary, 240);
+
 	const toned = await Generator.text(prompt, "gpt-4-turbo-2024-04-09", {
 		openai: {
 			temperature: 0,
 		},
 	});
 
-	prompt = Prompt.changeToneSimple(summary, 240);
+	prompt = Prompt.ChangeTone.outputSingleLine(summary, 240);
 
 	const tonedSimple = await Generator.text(prompt, "gpt-4-turbo-2024-04-09", {
 		openai: {
