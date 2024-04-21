@@ -16,16 +16,18 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.4",
-    "@vitest/coverage-v8": "^1.5.0",
     "@elemental-sea/tsconfig": "workspace:*",
+    "@elemental-sea/vitest-config": "workspace:*",
+    "@types/jsdom": "^21.1.6",
+    "@vitest/coverage-v8": "^1.5.0",
     "typescript": "^5.4.4",
-    "vitest": "^1.5.0",
-    "@elemental-sea/vitest-config": "workspace:*"
+    "vitest": "^1.5.0"
   },
   "dependencies": {
     "@langchain/anthropic": "^0.1.16",
     "@langchain/google-genai": "^0.0.11",
     "@langchain/openai": "^0.0.28",
+    "jsdom": "^24.0.0",
     "langchain": "^0.1.34",
     "langsmith": "^0.1.14",
     "ts-pattern": "^5.1.1"
