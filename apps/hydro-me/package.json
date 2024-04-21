@@ -16,11 +16,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.4",
-    "@vitest/coverage-v8": "^1.5.0",
     "@elemental-sea/tsconfig": "workspace:*",
+    "@elemental-sea/vitest-config": "workspace:*",
+    "@types/jsdom": "^21.1.6",
+    "@vitest/coverage-v8": "^1.5.0",
     "typescript": "^5.4.4",
-    "vitest": "^1.5.0",
-    "@elemental-sea/vitest-config": "workspace:*"
+    "vitest": "^1.5.0"
   },
   "dependencies": {
     "@langchain/anthropic": "^0.1.16",
