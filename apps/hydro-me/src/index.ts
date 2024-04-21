@@ -8,7 +8,7 @@ async function start() {
 	let prompt = "";
 
 	const text = `
-	
+
 	`;
 
 	prompt = Prompt.summary(text);
