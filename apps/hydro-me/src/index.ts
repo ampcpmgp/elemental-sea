@@ -14,19 +14,19 @@ async function start() {
 	const { article } = await crawl(url);
 	prompt = Prompt.summary(article);
 
-	const summary = await Generator.text(prompt, "gpt-3.5-turbo-instruct", {
+	const summary = await Generator.chat(prompt, "gemini-1.0-pro", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.ChangeTone.outputMultiLines(summary, 240);
 
-	const toned = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 180);
 
-	const tonedSimple = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 }
