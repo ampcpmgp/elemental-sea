@@ -17,7 +17,7 @@ type Args =
 	| [OpenAIModelName, OpenAIModelOption]
 	| [GoogleModelName, GoogleModelOption];
 
-export async function text(prompt: string, ...args: Args) {
+export async function chat(prompt: string, ...args: Args) {
 	const [modelName, option] = args;
 
 	const model = match(modelName)

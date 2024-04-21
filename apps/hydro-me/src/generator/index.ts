@@ -1,3 +1,3 @@
-import { text } from "./text/text";
+import { chat } from "./chat/chat";
 
-export const Generator = { text };
+export const Generator = { chat };
