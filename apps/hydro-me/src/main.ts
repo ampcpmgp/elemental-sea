@@ -18,6 +18,11 @@ async function start() {
 		temperature: 0,
 	});
 
+	prompt = Prompt.refine(article);
+	await Generator.chat(prompt, "gemini-1.0-pro", {
+		temperature: 0,
+	});
+
 	prompt = Prompt.ChangeTone.outputMultiLines(summary, 240);
 
 	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
