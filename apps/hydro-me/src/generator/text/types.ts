@@ -8,7 +8,7 @@ export type AnthoropicModelName =
 	| "claude-3-sonnet-20240229";
 
 // https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4
-export type OpenAIModelName = "gpt-4-turbo-2024-04-09";
+export type OpenAIModelName = "gpt-4-turbo-2024-04-09" | "gpt-3.5-turbo-0125";
 
 // https://ai.google.dev/gemini-api/docs/models/gemini?hl=ja#model-versions
 export type GoogleModelName = "gemini-1.0-pro";

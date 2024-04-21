@@ -24,22 +24,23 @@ export async function text(prompt: string, ...args: Args) {
 		.with(
 			"claude-3-haiku-20240307",
 			"claude-3-sonnet-20240229",
-			(modelName) =>
+			(model) =>
 				new ChatAnthropic({
-					model: modelName,
+					model,
 					...option,
 				}),
 		)
 		.with(
 			"gpt-4-turbo-2024-04-09",
-			() => new ChatOpenAI({ model: "gpt-4-turbo-2024-04-09", ...option }),
+			"gpt-3.5-turbo-0125",
+			(model) => new ChatOpenAI({ model, ...option }),
 		)
 		.with(
 			"gemini-1.0-pro",
-			() =>
+			(model) =>
 				// API references: https://api.js.langchain.com/classes/langchain_google_genai.ChatGoogleGenerativeAI.html
 				new ChatGoogleGenerativeAI({
-					model: "gemini-pro",
+					model,
 					...option,
 				}),
 		)
