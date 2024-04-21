@@ -14,7 +14,7 @@ async function start() {
 	const { article } = await crawl(url);
 	prompt = Prompt.summary(article);
 
-	const summary = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+	const summary = await Generator.text(prompt, "gpt-3.5-turbo-instruct", {
 		temperature: 0,
 	});
 

@@ -51,7 +51,7 @@ export async function chat(prompt: string, ...args: Args) {
 
 	isString(content);
 
-	console.info("🚀🚀🚀 generated text 🚀🚀🚀");
+	console.info("🚀🚀🚀 generated chat 🚀🚀🚀");
 	console.info(content);
 	console.info(content.length);
 	console.info();
