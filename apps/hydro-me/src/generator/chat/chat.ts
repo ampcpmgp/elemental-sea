@@ -61,8 +61,8 @@ export async function chat(prompt: string, ...args: Args) {
 	isString(content);
 
 	console.info(`🚀🚀🚀 generated chat (${modelName}) 🚀🚀🚀`);
-	console.info(content);
 	console.info(content.length);
+	console.info(content);
 	console.info();
 
 	return content;

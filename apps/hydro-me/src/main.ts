@@ -1,7 +1,9 @@
+import { ChatIflytekXinghuo } from "langchain/chat_models/iflytek_xinghuo";
 import { crawl } from "./crawler/crawl";
 import { Generator } from "./generator";
 import { Prompt } from "./prompt";
 import assert from "node:assert";
+import { Formatter } from "./fomatter/formatter";
 
 start();
 
@@ -23,13 +25,20 @@ async function start() {
 		temperature: 0,
 	});
 
-	prompt = Prompt.ChangeTone.outputMultiLines(refinedSummary, 240);
+	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 360);
 	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
-	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 100);
+	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 240);
 	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
+
+	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 120);
+	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+		temperature: 0,
+	});
+
+	console.info(url);
 }
