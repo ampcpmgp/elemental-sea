@@ -32,8 +32,17 @@ export async function chat(prompt: string, ...args: Args) {
 		)
 		.with(
 			"gpt-4-turbo-2024-04-09",
-			"gpt-3.5-turbo-0125",
 			(model) => new ChatOpenAI({ model, ...option }),
+		)
+		.with(
+			"gpt-3.5-turbo-0125",
+			(model) =>
+				new ChatOpenAI({
+					model,
+					// half of the maxTokens
+					maxTokens: 2048,
+					...option,
+				}),
 		)
 		.with(
 			"gemini-1.0-pro",
@@ -51,7 +60,7 @@ export async function chat(prompt: string, ...args: Args) {
 
 	isString(content);
 
-	console.info("🚀🚀🚀 generated chat 🚀🚀🚀");
+	console.info(`🚀🚀🚀 generated chat (${modelName}) 🚀🚀🚀`);
 	console.info(content);
 	console.info(content.length);
 	console.info();

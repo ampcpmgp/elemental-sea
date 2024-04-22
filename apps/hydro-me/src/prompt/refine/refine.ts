@@ -1,4 +1,7 @@
-export function refine(summary: string, limit = 4, lineLimit = 40) {
+export function refine(summary: string, maxChars: number) {
+	const maxLines = 4;
+	const lineLimit = Math.floor(maxChars / maxLines);
+
 	return `
 以下本文の要約を
 
@@ -6,7 +9,7 @@ export function refine(summary: string, limit = 4, lineLimit = 40) {
 ${summary}
 \`\`\`
 
-起承転結を意識して4行に分け、各行60文字以内に収めるように要約してください。
+起承転結を意識して${maxLines}行に分け、各行${lineLimit}文字以内に収めるように要約してください。
 
 テンプレートは以下を利用してください。
 

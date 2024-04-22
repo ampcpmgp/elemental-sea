@@ -24,7 +24,7 @@ export async function text(prompt: string, ...args: Args) {
 
 	isString(text);
 
-	console.info("🚀🚀🚀 generated text 🚀🚀🚀");
+	console.info(`🚀🚀🚀 generated text (${modelName}) 🚀🚀🚀`);
 	console.info(text);
 	console.info(text.length);
 	console.info();
