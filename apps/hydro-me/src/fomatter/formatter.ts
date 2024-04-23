@@ -1,11 +1,10 @@
 export class Formatter {
 	private _rawText: string;
-	private _text: string;
+	private _text = "";
 	private _lines: string[] = [];
 
 	constructor(rawText: string) {
 		this._rawText = rawText;
-		this._text = rawText;
 	}
 
 	splitTextByEmoji() {
