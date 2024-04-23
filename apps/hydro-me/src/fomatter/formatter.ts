@@ -48,6 +48,16 @@ export class Formatter {
 		return this.splitTextByEmoji().appendUrlToLastLine().generateMessage();
 	}
 
+	outputFiles() {
+		const path = require("node:path").resolve(
+			import.meta.dir,
+			"../../",
+			"post.txt",
+		);
+
+		Bun.write(path, this.x());
+	}
+
 	get text() {
 		return this._text;
 	}
