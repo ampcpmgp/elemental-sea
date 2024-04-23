@@ -9,6 +9,7 @@ start();
 
 async function start() {
 	let prompt: string;
+	let summary: string;
 
 	const url = Bun.env.CRAWLER_URL;
 	assert(url, "CRAWLER_URL is required");
@@ -16,26 +17,26 @@ async function start() {
 	const { article } = await crawl(url);
 	prompt = Prompt.summary(article);
 
-	const summary = await Generator.chat(prompt, "gemini-1.0-pro", {
+	summary = await Generator.chat(prompt, "gemini-1.0-pro", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.refine(summary, 240);
-	const refinedSummary = await Generator.chat(prompt, "gemini-1.0-pro", {
+	summary = await Generator.chat(prompt, "gemini-1.0-pro", {
 		temperature: 0,
 	});
 
-	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 360);
+	prompt = Prompt.ChangeTone.outputSingleLine(summary, 360);
 	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
-	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 240);
+	prompt = Prompt.ChangeTone.outputSingleLine(summary, 240);
 	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
-	prompt = Prompt.ChangeTone.outputSingleLine(refinedSummary, 120);
+	prompt = Prompt.ChangeTone.outputSingleLine(summary, 120);
 	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
