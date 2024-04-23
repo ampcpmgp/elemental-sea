@@ -20,4 +20,22 @@ describe("formatter", () => {
 			"🏗️🌐さらに、政府支援の不足や水素インフラの不足、米国からのブルー水素の輸入が予想されるなど、再生可能水素開発には課題が山積しているかも！",
 		]);
 	});
+
+	it("should append url to the second line", async () => {
+		// Arrange
+		const url = "https://example.com";
+		const formatter = new Formatter("");
+		formatter.lines = ["line1", "line2", "line3"];
+
+		// Act
+		const result = formatter.appendUrl(url);
+
+		// Assert
+		expect(formatter.lines).toStrictEqual([
+			"line1",
+			"https://example.com",
+			"line2",
+			"line3",
+		]);
+	});
 });

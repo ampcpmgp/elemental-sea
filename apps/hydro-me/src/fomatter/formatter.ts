@@ -22,13 +22,7 @@ export class Formatter {
 	}
 
 	appendUrl(url: string) {
-		this._rawText = `${this.text}\n${url}`;
-
-		return this;
-	}
-
-	lineSpace(num: number) {
-		this._rawText = this.text.replace(/\n/g, "\n".repeat(num));
+		this._lines.splice(1, 0, url);
 
 		return this;
 	}
@@ -51,5 +45,17 @@ export class Formatter {
 
 	get lines() {
 		return this._lines;
+	}
+
+	set text(value: string) {
+		this._text = value;
+	}
+
+	set rawText(value: string) {
+		this._rawText = value;
+	}
+
+	set lines(value: string[]) {
+		this._lines = value;
 	}
 }
