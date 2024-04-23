@@ -1,23 +1,56 @@
 export class Formatter {
-	private text: string;
+	private _rawText: string;
+	private _text: string;
+	private _lines: string[] = [];
 
-	constructor(text: string) {
-		this.text = text;
+	constructor(rawText: string) {
+		this._rawText = rawText;
+		this._text = rawText;
+	}
+
+	splitTextByEmoji() {
+		/**
+		 * emoji detection
+		 * show more link: https://stackoverflow.com/questions/18862256/how-to-detect-emoji-using-javascript
+		 */
+		const emojiPattern = new RegExp(/(\p{RGI_Emoji}+)/, "gv");
+		this._lines = this.text
+			.replace(emojiPattern, "\n$1")
+			.split("\n")
+			.filter(Boolean);
+
+		return this;
 	}
 
 	appendUrl(url: string) {
-		this.text = `${this.text}\n${url}`;
+		this._rawText = `${this.text}\n${url}`;
 
 		return this;
 	}
 
 	lineSpace(num: number) {
-		this.text = this.text.replace(/\n/g, "\n".repeat(num));
+		this._rawText = this.text.replace(/\n/g, "\n".repeat(num));
 
 		return this;
 	}
 
-	str() {
+	x() {
 		return this.text;
+	}
+
+	bsky() {
+		return this.text;
+	}
+
+	get text() {
+		return this._text;
+	}
+
+	get rawText() {
+		return this._rawText;
+	}
+
+	get lines() {
+		return this._lines;
 	}
 }
