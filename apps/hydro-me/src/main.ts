@@ -21,7 +21,7 @@ async function start() {
 		temperature: 0,
 	});
 
-	prompt = Prompt.refine(summary, 240);
+	prompt = Prompt.refine(summary, 360);
 	summary = await Generator.chat(prompt, "gemini-1.0-pro", {
 		temperature: 0,
 	});
