@@ -38,4 +38,34 @@ describe("formatter", () => {
 			"line3",
 		]);
 	});
+
+	it("should append url to the last line", async () => {
+		// Arrange
+		const formatter = new Formatter("");
+		formatter.lines = ["line1", "line2", "line3"];
+		formatter.url = "https://example.com";
+
+		// Act
+		const result = formatter.appendUrlToLastLine();
+
+		// Assert
+		expect(formatter.lines).toStrictEqual([
+			"line1",
+			"line2",
+			"line3",
+			"https://example.com",
+		]);
+	});
+
+	it("should generate message", async () => {
+		// Arrange
+		const formatter = new Formatter("");
+		formatter.lines = ["line1", "line2", "line3"];
+
+		// Act
+		const result = formatter.generateMessage();
+
+		// Assert
+		expect(result).toBe("line1\n\nline2\n\nline3");
+	});
 });
