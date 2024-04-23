@@ -1,6 +1,7 @@
 export class Formatter {
 	private _rawText: string;
 	private _text = "";
+	private _url = "";
 	private _lines: string[] = [];
 
 	constructor(rawText: string) {
@@ -13,7 +14,7 @@ export class Formatter {
 		 * show more link: https://stackoverflow.com/questions/18862256/how-to-detect-emoji-using-javascript
 		 */
 		const emojiPattern = new RegExp(/(\p{RGI_Emoji}+)/, "gv");
-		this._lines = this.text
+		this.lines = this.rawText
 			.replace(emojiPattern, "\n$1")
 			.split("\n")
 			.filter(Boolean);
@@ -21,18 +22,30 @@ export class Formatter {
 		return this;
 	}
 
-	appendUrl(url: string) {
-		this._lines.splice(1, 0, url);
+	appendUrl() {
+		this.lines.splice(1, 0, this.url);
 
 		return this;
 	}
 
+	appendUrlToLastLine() {
+		this.lines.push(this.url);
+
+		return this;
+	}
+
+	generateMessage() {
+		const message = this._lines.join("\n\n");
+
+		return message;
+	}
+
 	x() {
-		return this.text;
+		return this.splitTextByEmoji().appendUrl().generateMessage();
 	}
 
 	bsky() {
-		return this.text;
+		return this.splitTextByEmoji().appendUrlToLastLine().generateMessage();
 	}
 
 	get text() {
@@ -47,6 +60,10 @@ export class Formatter {
 		return this._lines;
 	}
 
+	get url() {
+		return this._url;
+	}
+
 	set text(value: string) {
 		this._text = value;
 	}
@@ -57,5 +74,9 @@ export class Formatter {
 
 	set lines(value: string[]) {
 		this._lines = value;
+	}
+
+	set url(value: string) {
+		this._url = value;
 	}
 }

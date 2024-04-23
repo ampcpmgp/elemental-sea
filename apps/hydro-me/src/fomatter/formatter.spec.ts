@@ -10,7 +10,7 @@ describe("formatter", () => {
 		const formatter = new Formatter(text);
 
 		// Act
-		const result = formatter.splitTextByEmoji();
+		formatter.splitTextByEmoji();
 
 		// Assert
 		expect(formatter.lines).toStrictEqual([
@@ -23,12 +23,12 @@ describe("formatter", () => {
 
 	it("should append url to the second line", async () => {
 		// Arrange
-		const url = "https://example.com";
 		const formatter = new Formatter("");
 		formatter.lines = ["line1", "line2", "line3"];
+		formatter.url = "https://example.com";
 
 		// Act
-		const result = formatter.appendUrl(url);
+		const result = formatter.appendUrl();
 
 		// Assert
 		expect(formatter.lines).toStrictEqual([
