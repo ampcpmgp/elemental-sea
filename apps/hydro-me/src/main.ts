@@ -17,7 +17,7 @@ async function start() {
 	const { article } = await crawl(url);
 	prompt = Prompt.summary(article);
 
-	summary = await Generator.chat(prompt, "gemini-1.0-pro", {
+	summary = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
