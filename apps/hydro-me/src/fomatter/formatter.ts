@@ -13,7 +13,7 @@ export class Formatter {
 		 * emoji detection
 		 * show more link: https://stackoverflow.com/questions/18862256/how-to-detect-emoji-using-javascript
 		 */
-		const emojiPattern = new RegExp(/(\p{RGI_Emoji}+)/, "gv");
+		const emojiPattern = new RegExp(/(\p{RGI_Emoji}+)/gv);
 		this.lines = this.rawText
 			.replace(emojiPattern, "\n$1")
 			.split("\n")
