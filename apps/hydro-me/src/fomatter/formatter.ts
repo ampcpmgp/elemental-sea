@@ -1,3 +1,5 @@
+import emojiRegex from "emoji-regex";
+
 export class Formatter {
 	private _rawText: string;
 	private _text = "";
@@ -11,9 +13,14 @@ export class Formatter {
 	splitTextByEmoji() {
 		/**
 		 * emoji detection
+		 * currently not supported `new RegExp(/(\p{RGI_Emoji}+)/gv);`
 		 * show more link: https://stackoverflow.com/questions/18862256/how-to-detect-emoji-using-javascript
+		 *
+		 * workaround: use emoji-regex package
 		 */
-		const emojiPattern = new RegExp(/(\p{RGI_Emoji}+)/gv);
+		const regex = emojiRegex();
+		const emojiPattern = new RegExp(`((${regex.source})+)`, "g");
+
 		this.lines = this.rawText
 			.replace(emojiPattern, "\n$1")
 			.split("\n")
