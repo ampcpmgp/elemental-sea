@@ -43,7 +43,7 @@ describe("crawl", () => {
 			crawl("https://www.hydrogeninsight.com/electrolysers/us-awards-about"),
 		).resolves.toMatchObject({
 			title:
-				"US awards about $335m of investment tax credits for new hydrogen-equipment manufacturing facilities | Hydrogen news and intelligence",
+				"New draft hydrogen strategy | Kazakhstan targets 10GW of electrolysers by 2040",
 			article: expect.any(String),
 		});
 	});
