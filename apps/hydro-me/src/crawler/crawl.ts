@@ -1,5 +1,4 @@
-import { JSDOM } from "jsdom";
-import { afterEach, describe } from "vitest";
+import * as cheerio from "cheerio";
 import { SELECTOR } from "./const/selector";
 import { P, match } from "ts-pattern";
 
@@ -21,17 +20,13 @@ export async function crawl(urlStr: string) {
 	}
 
 	const html = await response.text();
-	const dom = new JSDOM(html);
-	const document = dom.window.document;
+	const $ = cheerio.load(html);
 
 	const selector = SELECTOR[siteName];
 
-	const title = document.querySelector("title")?.textContent ?? "";
-	const $article = document.querySelectorAll(selector);
-
-	const article = Array.from($article)
-		.map((el) => el.textContent)
-		.join("\n");
+	const title = $("title")?.text() ?? "";
+	const $article = $(selector);
+	const article = $article.text();
 
 	if (!title || !article) {
 		throw new Error("Failed to fetch title or article");
