@@ -5,6 +5,7 @@
   "main": "src/main.ts",
   "private": true,
   "scripts": {
+		"chat": "bun run src/chat.ts",
     "sns-post": "bun run src/main.ts",
     "sns-post:dev": "bun run src/main.ts --watch",
     "test": "vitest run",

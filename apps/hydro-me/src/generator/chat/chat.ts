@@ -13,8 +13,11 @@ import { isString } from "../../utils/is-string";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 
 type Args =
+	| [AnthoropicModelName]
 	| [AnthoropicModelName, AnthoropicModelOption]
+	| [OpenAIModelName]
 	| [OpenAIModelName, OpenAIModelOption]
+	| [GoogleModelName]
 	| [GoogleModelName, GoogleModelOption];
 
 export async function chat(prompt: string, ...args: Args) {
