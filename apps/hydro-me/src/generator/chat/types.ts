@@ -5,6 +5,7 @@ import type {
 	anthoropicModelNames,
 	googleModelNames,
 	openaiModelNames,
+	modelNames,
 } from "./const";
 
 // https://docs.anthropic.com/claude/docs/models-overview
@@ -15,6 +16,8 @@ export type OpenAIModelName = (typeof openaiModelNames)[number];
 
 // https://ai.google.dev/gemini-api/docs/models/gemini?hl=ja#model-versions
 export type GoogleModelName = (typeof googleModelNames)[number];
+
+export type ModelName = (typeof modelNames)[number];
 
 export type AnthoropicModelOption = ConstructorParameters<
 	typeof ChatAnthropic
