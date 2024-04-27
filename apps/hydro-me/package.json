@@ -5,6 +5,7 @@
   "main": "src/main.ts",
   "private": true,
   "scripts": {
+		"chat": "bun run src/chat.ts",
     "sns-post": "bun run src/main.ts",
     "sns-post:dev": "bun run src/main.ts --watch",
     "test": "vitest run",
@@ -26,6 +27,7 @@
     "vitest": "^1.5.0"
   },
   "dependencies": {
+    "@inquirer/prompts": "^5.0.1",
     "@langchain/anthropic": "^0.1.16",
     "@langchain/google-genai": "^0.0.11",
     "@langchain/openai": "^0.0.28",

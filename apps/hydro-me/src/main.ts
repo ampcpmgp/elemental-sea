@@ -1,9 +1,7 @@
-import { ChatIflytekXinghuo } from "langchain/chat_models/iflytek_xinghuo";
 import { crawl } from "./crawler/crawl";
 import { Generator } from "./generator";
 import { Prompt } from "./prompt";
 import assert from "node:assert";
-import { Formatter } from "./fomatter/formatter";
 
 start();
 
