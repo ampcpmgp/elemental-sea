@@ -56,3 +56,17 @@ bun run fix-mismatched-versions
 cd pakcages/element
 npm publish --access=public ./
 ```
+
+## Run
+
+```shell
+bunx turbo run sns-post
+bunx turbo run test
+bunx turbo run lint
+bunx turbo run svelte-check
+bunx turbo run format
+bunx turbo run format-check
+bunx turbo run type-check
+bunx turbo run coverage
+bunx turbo run deploy
+```

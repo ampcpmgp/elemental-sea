@@ -5,6 +5,7 @@
 		"build": {
 			"outputs": ["dist/**"]
 		},
+		"sns-post": {},
 		"test": {},
 		"lint": {},
 		"svelte-check": {},
