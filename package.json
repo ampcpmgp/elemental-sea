@@ -12,7 +12,7 @@
     "type-check": "turbo run type-check",
     "coverage": "vitest run --coverage --coverage.reportOnFailure --coverage.reporter=json-summary --coverage.reporter=json",
     "deploy": "turbo run deploy",
-		"sns-post": "turbo run sns-post",
+		"sns-post": "turbo run sns-post --force",
     "fix-mismatched-versions": "syncpack fix-mismatches",
 		"show-lockfile": "bun bun.lockb > bun.txt"
   },
