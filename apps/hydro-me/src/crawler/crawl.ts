@@ -24,9 +24,16 @@ export async function crawl(urlStr: string) {
 
 	const selector = SELECTOR[siteName];
 
+	const articles: string[] = [];
+
 	const title = $("title")?.text() ?? "";
 	const $article = $(selector);
-	const article = $article.text();
+
+	$article.each((i, elem) => {
+		articles[i] = $(elem).text();
+	});
+
+	const article = articles.join("\n");
 
 	if (!title || !article) {
 		throw new Error("Failed to fetch title or article");
