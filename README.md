@@ -11,19 +11,19 @@ bun install
 ## Run
 
 ```shell
-bunx turbo run dev
+bun run dev
 ```
 
 ## Run (specific package)
 
 ```shell
-bunx turbo run type-check --filter=element
+bun run type-check --filter=element
 ```
 
 ## Generate template workspace
 
 ```shell
-bunx turbo gen
+bun gen
 
 ? Select generator to run   generate workspace: Create a new workspace in the monorepo with a README.md and package.json
 ? What type of workspace is this? packages
@@ -33,7 +33,7 @@ bunx turbo gen
 ## Generate blank package
 
 ```shell
-bunx turbo gen workspace
+bun gen workspace
 ```
 
 ## Install package
@@ -57,16 +57,9 @@ cd pakcages/element
 npm publish --access=public ./
 ```
 
-## Run
+## Other
 
 ```shell
-bunx turbo run sns-post
-bunx turbo run test
-bunx turbo run lint
-bunx turbo run svelte-check
-bunx turbo run format
-bunx turbo run format-check
-bunx turbo run type-check
-bunx turbo run coverage
-bunx turbo run deploy
+# list all scripts
+bun run
 ```
