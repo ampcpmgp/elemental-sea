@@ -3,5 +3,6 @@
 
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
-	}
+	},
+	"circleci.persistedProjectSelection": []
 }
