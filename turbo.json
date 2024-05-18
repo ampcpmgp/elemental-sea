@@ -5,7 +5,8 @@
 		"build": {
 			"outputs": ["dist/**"]
 		},
-		"sns-post": {},
+		"@elemental-sea/hydro-me#sns-post": {},
+		"@elemental-sea/hydro-me#summary": {},
 		"test": {},
 		"lint": {},
 		"svelte-check": {},

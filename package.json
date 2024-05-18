@@ -13,6 +13,7 @@
     "coverage": "vitest run --coverage --coverage.reportOnFailure --coverage.reporter=json-summary --coverage.reporter=json",
     "deploy": "turbo run deploy",
 		"sns-post": "turbo run sns-post --force",
+		"summary": "turbo run summary --force",
     "fix-mismatched-versions": "syncpack fix-mismatches",
 		"show-lockfile": "bun bun.lockb > bun.txt"
   },
