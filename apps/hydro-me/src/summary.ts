@@ -1,4 +1,3 @@
-import { crawl } from "./crawler/crawl";
 import { Generator } from "./generator";
 import { Prompt } from "./prompt";
 import { readFile, exists } from "node:fs/promises";
