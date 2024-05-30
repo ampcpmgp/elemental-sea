@@ -22,7 +22,7 @@ export function summary(news: string) {
 文字列置換は以下の通りです。
 キロワット -> KW
 メガワット -> MW
-H2 -> H²
+H2 -> 水素
 
 最終出力は必ず、上記テンプレートのみを出力してください。
 
