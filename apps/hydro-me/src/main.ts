@@ -25,17 +25,17 @@ async function start() {
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 360);
-	await Generator.chat(prompt, "gpt-4o-2024-08-06", {
+	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 240);
-	await Generator.chat(prompt, "gpt-4o-2024-08-06", {
+	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 120);
-	await Generator.chat(prompt, "gpt-4o-2024-08-06", {
+	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
