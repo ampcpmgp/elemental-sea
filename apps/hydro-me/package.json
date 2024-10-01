@@ -7,8 +7,8 @@
   "scripts": {
 		"chat": "bun run src/chat.ts",
 		"summary": "bun run src/summary.ts",
-    "sns-post": "bun run src/main.ts",
-    "sns-post:dev": "bun run src/main.ts --watch",
+    "generate-post": "bun run src/main.ts",
+    "generate-post:dev": "bun run src/main.ts --watch",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "lint": "bunx @biomejs/biome lint .",
