@@ -4,6 +4,7 @@ export interface Element {
 	symbol: Element.Symbol;
 	number: number;
 	category: Element.Category;
+	phase: ElementPhase;
 }
 
 export namespace Element {
