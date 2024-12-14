@@ -2,6 +2,8 @@ import { crawl } from "./crawler/crawl";
 import { Generator } from "./generator";
 import { Prompt } from "./prompt";
 import assert from "node:assert";
+import { createSnsText } from "./utils/create-sns-text";
+import { distSnsText } from "./utils/dist-sns-text";
 
 start();
 
@@ -25,19 +27,23 @@ async function start() {
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 360);
-	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+	const result1 = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 240);
-	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+	const result2 = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
 
 	prompt = Prompt.ChangeTone.outputSingleLine(summary, 120);
-	await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
+	const result3 = await Generator.chat(prompt, "gpt-4-turbo-2024-04-09", {
 		temperature: 0,
 	});
+
+	distSnsText(
+		`${createSnsText(result1, url)}\n\n---------\n\n${createSnsText(result2, url)}\n\n---------\n\n${createSnsText(result3, url)}`,
+	);
 
 	console.info(url);
 }
